@@ -13,3 +13,5 @@
 ^_pkgdown\.yml$
 ^CODE_STYLE\.md$
 ^CONTRIBUTING\.md$
+^CLAUDE.md$
+^AGENTS.md$
