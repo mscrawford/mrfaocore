@@ -239,7 +239,7 @@ calcFAOmassbalance_pre <- function(version = "join2010", years = NULL) { # nolin
 
     # Map production attributes to FAO items
     relationmatrixF <-  relationmatrix[which(relationmatrix$post2010_FoodBalanceItem %in% getItems(fb, dim = 3.1)), ]
-    relationmatrixF <- relationmatrixF[-which(relationmatrixF$post2010_FoodBalanceItem == ""), ]
+    relationmatrixF <- relationmatrixF[relationmatrixF$post2010_FoodBalanceItem != "", ]
     prodAttributesFB <- toolAggregate(x = prodAttributes, rel = relationmatrixF,
                                       dim = 3.2, from = "k",
                                       to = "post2010_FoodBalanceItem", partrel = TRUE)
